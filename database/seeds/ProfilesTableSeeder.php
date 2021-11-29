@@ -13,17 +13,20 @@ class ProfilesTableSeeder extends Seeder
      */
     public function run()
     {
-        Profile::create([
-            'id' => '1',
-            'profile' => 'Admin'
-        ],
-        [
-            'id' => '2',
-            'profile' => 'Supervisor'
-        ],
-        [
-            'id' => '3',
-            'profile' => 'Operário'
-        ]);
+        $profiles = [
+            [
+                'id' => '1',
+                'profile' => 'Admin'
+            ],
+            [
+                'id' => '2',
+                'profile' => 'Supervisor'
+            ],
+            [
+                'id' => '3',
+                'profile' => 'Operário'
+            ]
+        ];
+        Profile::insert($profiles);
     }
 }
